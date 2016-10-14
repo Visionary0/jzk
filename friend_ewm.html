@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>好友抢红包-二维码</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/function.js"></script>
+</head>
+<body class="bg">
+
+<div class="layer advA bg_00">
+    <a href="javascript:;" onClick="javascript :history.back(-1);"><img src="images/back.png" alt="back">     <div class="advA1">返回</div></a>
+    <div class="advA2">兼赚客</div>
+    <a class="friend_gd" href=""><img src="images/h_gd.png"/></a>
+</div>
+
+<!--焦点图结束-->
+<!--input-->
+<div class="layer bg_fa">
+	<div class="friend_yq">
+		<img src="images/h_02.png" />
+	</div>
+    <div class="friend_ewm">
+    		<p>132*****分享抢红包活动，邀请朋友圈参加
+该活动，请选择分享方式：</p>
+		<img class="ewm" src="images/h_ewm.png" />
+		<h2>扫一扫二维码</h2>
+		<h3>立即抢红包</h3>
+		<ul>
+			<li>
+				<img src="images/h_03.png" />
+				<h4>朋友圈</h4>
+			</li>
+			<li>
+				<img src="images/h_04.png" />
+				<h4>微信好友</h4>
+			</li>
+			<li>
+				<img src="images/h_05.png" />
+				<h4>Q-zone</h4>
+			</li>
+			<li>
+				<img src="images/h_06.png" />
+				<h4>QQ</h4>
+			</li>
+			<li>
+				<img src="images/h_07.png" />
+				<h4>微博</h4>
+			</li>
+		</ul>
+    </div>
+</div>
+<div class="layer mt80 mb20"></div>
+<!--页尾开始-->
+<footer class="footer">
+    <ul class="footernav">
+        <li class="on">
+            <a href="index.html">
+                <img class="off" src="images/ind_40.png">
+                <img class="on" src="images/ind_41.png">
+                <div class="opacity">首页</div>
+            </a>
+        </li>
+        <li>
+            <a href="shops.html">
+                <img class="off" src="images/ind_42.png">
+                <img class="on" src="images/ind_43.png">
+                <div class="opacity">我的</div>
+            </a>
+        </li>
+    </ul>
+</footer>
+<!--页尾结束-->
+
+<script type="text/javascript" src="js/touchslider.dev.js"></script>
+
+<script type="text/javascript">
+    /*焦点图*/
+    var active = 0,
+            as = document.getElementById('pagenavi').getElementsByTagName('a');
+    for (var i = 0; i < as.length; i++) {
+        (function () {
+            var j = i;
+            as[i].onclick = function () {
+                t2.slide(j);
+                return false;
+            }
+        })();
+    }
+    var t2 = new TouchSlider({
+        id: 'slider', speed: 600, timeout: 6000, before: function (index) {
+            as[active].className = '';
+            active = index;
+            as[active].className = 'active';
+        }
+    });
+    /*焦点图E*/
+
+</script>
+
+</body>
+</html>

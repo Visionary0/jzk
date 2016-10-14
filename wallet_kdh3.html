@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>钱包-可兑换余额</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/function.js"></script>
+    <script src="js/jquery-1.7.min.js"></script>
+    <script src="js/gauge.js"></script>
+</head>
+<body class="bg">
+<section class="header">
+    <img src="images/ind_01.png" alt="">
+</section>
+
+<div class="layer advA">
+    <a href=""><img src="images/back.png" alt="back"></a>
+    <div class="advA1">返回</div>
+    <div class="advA2">钱包</div>
+</div>
+
+<!--input-->
+<div class="query_sr">
+    <!--转盘-->
+
+
+	<div class="wallet_kdh_box">
+        <!--大背景-->
+        <div class="layer">
+            <div class="wallet_red_bg">
+                <canvas class="canvas_dial"  id="canvas_dial_id"></canvas>
+            </div>
+
+        </div>
+		<!--<img src="images/qb_bg.png"/>-->
+	</div>
+    <script>
+        $(function () {
+            var opts = {
+                lines: 120, // The number of lines to draw
+                angle: 0.35, // The length of each line
+                lineWidth: 0.05, // The line thickness
+                pointer: {
+                    length: 0.9, // The radius of the inner circle
+                    strokeWidth: 0.035, // The rotation offset
+                    color: '#000000' // Fill color
+                },
+                limitMax: 'false',   // If true, the pointer will not go past the end of the gauge
+                colorStart: '#FFD700',   // Colors
+                colorStop: '#FFD700',    // just experiment with them
+                strokeColor: '#E0E0E0',   // to see which ones work best for you
+                generateGradient: true
+            };
+            var target = document.getElementById('canvas_dial_id'); // your canvas element
+            var gauge = new Donut(target).setOptions(opts); // create sexy gauge!
+            gauge.maxValue = 10000; // set max gauge value
+            gauge.animationSpeed = 32; // set animation speed (32 is default value)
+            gauge.set(8000); // set actual value
+
+//        selectGaguge2 = new Donut(document.getElementById("select-2"));
+//        selectGaguge2.maxValue = 3000;
+//        selectGaguge2.set(1844);
+        });
+    </script>
+    <!---转盘-->
+	<div class="query_sr_content wallet_kdh">
+		<img src="images/qb_fgx.png" />
+		<ul>
+			<li>
+				<div class="sr_left">
+					<img src="images/z_jinri.png"/>
+					<span>今日总收入</span>
+				</div>
+				<div class="sr_right">
+					<span>1900金圆</span>
+					<img src="images/z_you.png" />
+				</div>
+			</li>
+			<li>
+				<div class="sr_left">
+					<img src="images/z_fenxiao.png"/>
+					<span>今日分销收入</span>
+				</div>
+				<div class="sr_right">
+					<span>100金圆</span>
+					<img src="images/z_you.png" />
+				</div>
+			</li>
+			<li>
+				<div class="sr_left">
+					<img src="images/z_lishi.png"/>
+					<span>历史总收入</span>
+				</div>
+				<div class="sr_right">
+					<span>100230金圆</span>
+					<img src="images/z_you.png" />
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!--页尾开始-->
+<footer class="footer">
+    <ul class="footernav">
+        <li class="on">
+            <a href="index.php">
+                <img src="images/ind_41.png">
+                <div class="opacity">首页</div>
+            </a>
+        </li>
+        <li>
+            <a href="index.php">
+                <img src="images/ind_42.png">
+                <div class="opacity">我的</div>
+            </a>
+        </li>
+    </ul>
+</footer>
+<!--页尾结束-->
+
+
+</body>
+</html>

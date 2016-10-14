@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>抢话费</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/function.js"></script>
+</head>
+<body class="bg bg_e7e7e7">
+<section class="header">
+    <img src="images/ind_01.png" alt="">
+</section>
+
+<div class="layer advA bg_1f86ed">
+    <a href=""><img src="images/back.png" alt="back"></a>
+    <div class="advA1">返回</div>
+    <div class="advA2">抢话费</div>
+</div>
+
+<!--input-->
+<div class="query_sr">
+    <div class="wallet_kdh_box">
+        <div class="swipe">
+            <ul id="slider">
+                <li><a href="javascript:;"><img src="images/z_qlb.png" alt="" class="img"/></a></li>
+                <li><a href="javascript:;"><img src="images/z_qlb.png" alt="" class="img"/></a></li>
+                <li><a href="javascript:;"><img src="images/z_qlb.png" alt="" class="img"/></a></li>
+            </ul>
+            <div id="pagenavi">
+                <a href="javascript:void(0);" class="active"></a>
+                <a href="javascript:void(0);"></a>
+                <a href="javascript:void(0);"></a>
+            </div>
+        </div>
+        <!--焦点图结束-->
+        <!--<img class="z_qlb" src="images/z_qlb.png"/>-->
+    </div>
+	<div class="qiang_hf">
+		<ul>
+			<li>
+				<img src="images/z_qianghf.png" />
+				<div class="qiang_hf_text">
+					<h1>光明创领未来&nbsp;&nbsp;雪莱特点亮你心中的梦想</h1>
+					<h5>雪莱特光电科技有限公司</h5>
+					<h6>有效期至2016年05月30日 18:00</h6>
+				</div>
+			</li>
+			<li class="qiang_hf_m">
+				<img src="images/z_qianghf.png" />
+				<div class="qiang_hf_text">
+					<h1>光明创领未来&nbsp;&nbsp;雪莱特点亮你心中的梦想</h1>
+					<h5>雪莱特光电科技有限公司</h5>
+					<h6>有效期至2016年05月30日 18:00</h6>
+				</div>
+			</li>
+			<li>
+				<img src="images/z_qianghf.png" />
+				<div class="qiang_hf_text">
+					<h1>光明创领未来&nbsp;&nbsp;雪莱特点亮你心中的梦想</h1>
+					<h5>雪莱特光电科技有限公司</h5>
+					<h6>有效期至2016年05月30日 18:00</h6>
+				</div>
+			</li>
+			<li>
+				<img src="images/z_qianghf.png" />
+				<div class="qiang_hf_text">
+					<h1>光明创领未来&nbsp;&nbsp;雪莱特点亮你心中的梦想</h1>
+					<h5>雪莱特光电科技有限公司</h5>
+					<h6>有效期至2016年05月30日 18:00</h6>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!--页尾开始-->
+<footer class="footer">
+    <ul class="footernav">
+        <li class="on">
+            <a href="index.html">
+                <img class="off" src="images/ind_40.png">
+                <img class="on" src="images/ind_41.png">
+                <div class="opacity">首页</div>
+            </a>
+        </li>
+        <li>
+            <a href="shops.html">
+                <img class="off" src="images/ind_42.png">
+                <img class="on" src="images/ind_43.png">
+                <div class="opacity">我的</div>
+            </a>
+        </li>
+    </ul>
+</footer>
+<!--页尾结束-->
+<script type="text/javascript" src="js/touchslider.dev.js"></script>
+
+<script type="text/javascript">
+    /*焦点图*/
+    var active = 0,
+            as = document.getElementById('pagenavi').getElementsByTagName('a');
+    for (var i = 0; i < as.length; i++) {
+        (function () {
+            var j = i;
+            as[i].onclick = function () {
+                t2.slide(j);
+                return false;
+            }
+        })();
+    }
+    var t2 = new TouchSlider({
+        id: 'slider', speed: 600, timeout: 6000, before: function (index) {
+            as[active].className = '';
+            active = index;
+            as[active].className = 'active';
+        }
+    });
+    /*焦点图E*/
+
+</script>
+
+</body>
+</html>

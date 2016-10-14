@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>发红包-兼赚客</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/function.js"></script>
+</head>
+<body class="bg7">
+
+<div class="layer advA bg_blue">
+    <a href="javascript:;" onClick="javascript :history.back(-1);"><img src="images/back.png" alt="back">
+        <div class="advA1">返回</div>
+    </a>
+    <div class="advA2">发红包</div>
+</div>
+
+<!--焦点图结束-->
+<!--input-->
+<div class="layer logB pasZBg">
+    <div class="pasZ">
+        <form action="" method="post">
+            <div class="logInput paSAuser">
+                <span>红包个数</span>
+                <input type="number" min="1" name="" id="" class="user" placeholder="填写个数">
+                <span>个</span>
+            </div>
+            <div class="logInput paSAuser paStol">
+                <span>总金额</span>
+                <input type="number" min="0.01" name="" id="" class="user" placeholder="填写金额">
+                <span>元</span>
+            </div>
+            <div class="logInput paSAuser paScon">
+                <input type="number" min="0.01" name="" id="" class="user" placeholder="填写发送内容">
+            </div>
+            <div class="layer paSTit">
+                ¥100.00
+            </div>
+            <div class="layer">
+                <div class="logInput logBtn bg_blue">
+                    塞钱进话费
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="layer mt80 mb20"></div>
+<!--页尾开始-->
+<footer class="footer">
+    <ul class="footernav">
+        <li class="on">
+            <a href="index.html">
+                <img class="off" src="images/ind_40.png">
+                <img class="on" src="images/ind_41.png">
+                <div class="opacity">首页</div>
+            </a>
+        </li>
+        <li>
+            <a href="shops.html">
+                <img class="off" src="images/ind_42.png">
+                <img class="on" src="images/ind_43.png">
+                <div class="opacity">我的</div>
+            </a>
+        </li>
+    </ul>
+</footer>
+<!--页尾结束-->
+
+<script type="text/javascript" src="js/touchslider.dev.js"></script>
+
+<script type="text/javascript">
+    /*焦点图*/
+    var active = 0,
+            as = document.getElementById('pagenavi').getElementsByTagName('a');
+    for (var i = 0; i < as.length; i++) {
+        (function () {
+            var j = i;
+            as[i].onclick = function () {
+                t2.slide(j);
+                return false;
+            }
+        })();
+    }
+    var t2 = new TouchSlider({
+        id: 'slider', speed: 600, timeout: 6000, before: function (index) {
+            as[active].className = '';
+            active = index;
+            as[active].className = 'active';
+        }
+    });
+    /*焦点图E*/
+
+</script>
+</body>
+</html>

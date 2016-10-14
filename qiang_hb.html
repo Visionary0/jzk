@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>抢红包</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--图片延时加载-->
+    <script type="text/javascript" src="js/jquery.lazyload.js"></script>
+    <script src="js/function.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("img").lazyload({
+                threshold: 100,
+                failurelimit: 40,
+                effect: "fadeIn"
+            });
+        })
+    </script>
+</head>
+<body class="bg bg_e7e7e7">
+<section class="header">
+    <img src="images/ind_01.png" alt="">
+</section>
+
+<div class="layer advA">
+    <a href=""><img src="images/back.png" alt="back"></a>
+    <div class="advA1">返回</div>
+    <div class="advA2">抢红包</div>
+</div>
+
+<!--input-->
+<div class="query_sr">
+	<div class="wallet_kdh_box">
+        <div class="swipe">
+
+            <ul id="slider">
+                <li><a href="javascript:;"><img src="images/z_qlb.png" alt="" class="img"/></a></li>
+                <li><a href="javascript:;"><img src="images/z_qlb.png" alt="" class="img"/></a></li>
+                <li><a href="javascript:;"><img src="images/z_qlb.png" alt="" class="img"/></a></li>
+            </ul>
+            <div id="pagenavi">
+                <a href="javascript:void(0);" class="active"></a>
+                <a href="javascript:void(0);"></a>
+                <a href="javascript:void(0);"></a>
+            </div>
+        </div>
+        <!--焦点图结束-->
+		<!--<img class="z_qlb" src="images/z_qlb.png"/>-->
+	</div>
+	<div class="qiang_hb_bnt">
+		<div class="qiang_ont">未拆(99)</div>
+		<div>已拆</div>
+	</div>
+	<div class="qiang_hb">
+		<ul>
+			<li>
+				<img src="images/z_qianghb.png" />
+				<div class="qiang_hf_text">
+					<h1>光明创领未来&nbsp;&nbsp;雪莱特点亮你心中的梦想</h1>
+					<h5>雪莱特光电科技有限公司</h5>
+					<h6>有效期至2016年05月30日 18:00</h6>
+				</div>
+			</li>
+			
+			<li>
+				<img src="images/z_qianghb.png" />
+				<div class="qiang_hf_text">
+					<h1>光明创领未来&nbsp;&nbsp;雪莱特点亮你心中的梦想</h1>
+					<h5>雪莱特光电科技有限公司</h5>
+					<h6>有效期至2016年05月30日 18:00</h6>
+				</div>
+			</li>
+		</ul>
+		<ul style="display: none;">
+			<li class="qiang_hb_m">
+				<img src="images/z_qianghb.png" />
+				<div class="qiang_hf_text">
+					<h1>222光明创领未来&nbsp;&nbsp;雪莱特点亮你心中的梦想</h1>
+					<h5>雪莱特光电科技有限公司</h5>
+					<h6>有效期至2016年05月30日 18:00</h6>
+				</div>
+			</li>
+			<li class="qiang_hb_m">
+				<img src="images/z_qianghb.png" />
+				<div class="qiang_hf_text">
+					<h1>222光明创领未来&nbsp;&nbsp;雪莱特点亮你心中的梦想</h1>
+					<h5>雪莱特光电科技有限公司</h5>
+					<h6>有效期至2016年05月30日 18:00</h6>
+				</div>
+			</li>
+			<li class="qiang_hb_m">
+				<img src="images/z_qianghb.png" />
+				<div class="qiang_hf_text">
+					<h1>222光明创领未来&nbsp;&nbsp;雪莱特点亮你心中的梦想</h1>
+					<h5>雪莱特光电科技有限公司</h5>
+					<h6>有效期至2016年05月30日 18:00</h6>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<script src="js/jquery-1.7.min.js"></script>
+<script>
+    jQuery(function ($) {
+        var aTab = $('.qiang_hb_bnt > div');
+        var aCon = $('.qiang_hb ul');
+        var timeId = null;
+
+        aTab.mouseover(function () {
+            var _this = $(this);
+            //setTimeout()可以延迟某段代码的执行。
+            timeId = setTimeout(function () {       //开启定时器
+                //$(this)就是当前元素。
+                _this.addClass('qiang_ont').siblings().removeClass('qiang_ont');
+                //如果用一组元素控制另一组元素，需要用到索引。
+                var index = _this.index();
+
+                aCon.eq(index).show().siblings().hide();
+            }, 300);
+
+        }).mouseout(function () {                //关闭定时器
+            //clearTimeout可以清除定时器
+            clearTimeout(timeId);
+        });
+    });
+</script>
+</div>
+
+<!--页尾开始-->
+<footer class="footer">
+    <ul class="footernav">
+        <li class="on">
+            <a href="index.html">
+                <img class="off" src="images/ind_40.png">
+                <img class="on" src="images/ind_41.png">
+                <div class="opacity">首页</div>
+            </a>
+        </li>
+        <li>
+            <a href="shops.html">
+                <img class="off" src="images/ind_42.png">
+                <img class="on" src="images/ind_43.png">
+                <div class="opacity">我的</div>
+            </a>
+        </li>
+    </ul>
+</footer>
+<!--页尾结束-->
+
+<script type="text/javascript" src="js/touchslider.dev.js"></script>
+
+<script type="text/javascript">
+    /*焦点图*/
+    var active = 0,
+            as = document.getElementById('pagenavi').getElementsByTagName('a');
+    for (var i = 0; i < as.length; i++) {
+        (function () {
+            var j = i;
+            as[i].onclick = function () {
+                t2.slide(j);
+                return false;
+            }
+        })();
+    }
+    var t2 = new TouchSlider({
+        id: 'slider', speed: 600, timeout: 6000, before: function (index) {
+            as[active].className = '';
+            active = index;
+            as[active].className = 'active';
+        }
+    });
+    /*焦点图E*/
+
+</script>
+</body>
+</html>

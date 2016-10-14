@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>商家店铺-兼赚客</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/function.js"></script>
+</head>
+<body class="bg">
+
+
+<div class="layer advA">
+    <a href="javascript:;" onClick="javascript :history.back(-1);"><img src="images/back.png" alt="back">     <div class="advA1">返回</div></a>
+    <div class="advA2">商家店铺</div>
+</div>
+
+<div class=" layer advB">
+    <div class="layer advZ">
+        <span>+99</span>
+    </div>
+    <div class="advB1"><img src="images/adv.png" alt=""></div>
+    <div class="advB2">一呼百应网络技术有限公司</div>
+    <div class="advB3">
+        <span>电商B2B</span>
+        <span>原材料采购</span>
+        <span>机械</span>
+        <span>半成品</span>
+        <span>配件</span>
+        <span>6000 万种类</span>
+    </div>
+</div>
+<!--焦点图结束-->
+<div class="layer advbA shoA">
+    <span>
+        <h3>内容简介</h3>一呼百应是全球领先专业商贸搜索引擎，中小企
+业采购、推广平台，收录了全国2千多万家中小
+企业数据，1亿多条中小企业产品上下游产业链
+供求信息。
+    </span>
+</div>
+
+<div class="layer shoB">
+    <span>
+        <span>现有商品(10)</span>
+    </span>
+</div>
+
+<!--adv广告列表-->
+
+<div class="layer advC shoC">
+    <ul>
+        <li><i>品牌商品</i>
+            <a href="">
+                <img src="images/shoGo.jpg" alt="">
+
+            </a>
+            <dl>
+                <a href=""><dd>紫椴花原蜜500g</dd></a>
+                <dt>¥53.1+6490银元</dt>
+            </dl>
+        </li>
+        <li><i>品牌商品</i>
+            <a href="">
+                <img src="images/shoGo.jpg" alt="">
+
+            </a>
+            <dl>
+                <a href=""><dd>紫椴花原蜜500g</dd></a>
+                <dt>¥53.1+6490银元</dt>
+            </dl>
+        </li>
+        <li><i>品牌商品</i>
+            <a href="">
+                <img src="images/shoGo.jpg" alt="">
+
+            </a>
+            <dl>
+                <a href=""><dd>紫椴花原蜜500g</dd></a>
+                <dt>¥53.1+6490银元</dt>
+            </dl>
+        </li>
+    </ul>
+</div>
+    <div class="layer mt80 mb20"></div>
+    <!--页尾开始-->
+    <footer class="footer">
+        <ul class="footernav">
+            <li class="on">
+                <a href="index.html">
+                    <img class="off" src="images/ind_40.png">
+                    <img class="on" src="images/ind_41.png">
+                    <div class="opacity">首页</div>
+                </a>
+            </li>
+            <li>
+                <a href="shops.html">
+                    <img class="off" src="images/ind_42.png">
+                    <img class="on" src="images/ind_43.png">
+                    <div class="opacity">我的</div>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <!--页尾结束-->
+
+    <script type="text/javascript" src="js/touchslider.dev.js"></script>
+
+    <script type="text/javascript">
+        /*焦点图*/
+        var active = 0,
+                as = document.getElementById('pagenavi').getElementsByTagName('a');
+        for (var i = 0; i < as.length; i++) {
+            (function () {
+                var j = i;
+                as[i].onclick = function () {
+                    t2.slide(j);
+                    return false;
+                }
+            })();
+        }
+        var t2 = new TouchSlider({
+            id: 'slider', speed: 600, timeout: 6000, before: function (index) {
+                as[active].className = '';
+                active = index;
+                as[active].className = 'active';
+            }
+        });
+        /*焦点图E*/
+
+    </script>
+</body>
+</html>

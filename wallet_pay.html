@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>钱包支付</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/function.js"></script>
+</head>
+<body class="bg bg_ff">
+<section class="header">
+    <img src="images/ind_01.png" alt="">
+</section>
+
+<div class="layer advA">
+    <a href=""><img src="images/back.png" alt="back"></a>
+    <div class="advA1">返回</div>
+    <div class="advA2">钱包余额</div>
+</div>
+
+<div class="layer">
+    <!--input-->
+    <div class="query_sr">
+        <div class="wallet_yue">
+            <img src="images/z_qianbao.png" />
+            <p>可兑换余额<span>1000</span><em>（金圆）</em></p>
+            <div class="wallet_yue_bnt">
+                <div class="yue_tx">提现</div>
+                <div class="yue_chf">话费充值</div>
+            </div>
+        </div>
+        <div class="wallet_yue_list">
+            <div class="yue_tixian">
+                <em>*</em>提现100金圆可兑换90元人民币
+            </div>
+            <ul>
+                <li>
+                    <h1 style="text-align:left;">消耗金圆</h1><h1>方式</h1><h1>金额（元）</h1><h1 style="width: 100px;">时间</h1>
+                </li>
+                <li>
+                    <h2>100金圆</h2><h3><img src="images/z_tixian.png" />提现</h3><h4 class="yue_hong">90</h4><em>06-01 15:25</em>
+                </li>
+                <li>
+                    <h2>100金圆</h2><h3><img src="images/z_chongzhi.png" />充值</h3><h4>90</h4><em>06-01 15:25</em>
+                </li>
+                <li>
+                    <h2>100金圆</h2><h3><img src="images/z_tixian.png" />提现</h3><h4 class="yue_hong">90</h4><em>06-01 15:25</em>
+                </li>
+                <li>
+                    <h2>100金圆</h2><h3><img src="images/z_chongzhi.png" />充值</h3><h4>90</h4><em>06-01 15:25</em>
+                </li>
+                <li>
+                    <h2>100金圆</h2><h3><img src="images/z_tixian.png" />提现</h3><h4 class="yue_hong">90</h4><em>06-01 15:25</em>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="layer mt80 mb20"></div>
+<!--页尾开始-->
+<footer class="footer">
+    <ul class="footernav">
+        <li class="on">
+            <a href="index.html">
+                <img class="off" src="images/ind_40.png">
+                <img class="on" src="images/ind_41.png">
+                <div class="opacity">首页</div>
+            </a>
+        </li>
+        <li>
+            <a href="shops.html">
+                <img class="off" src="images/ind_42.png">
+                <img class="on" src="images/ind_43.png">
+                <div class="opacity">我的</div>
+            </a>
+        </li>
+    </ul>
+</footer>
+<!--页尾结束-->
+<!--浮层支付-->
+<div class="layer payA">
+    <div class="layer payB">
+
+        <div class="layer payB1">
+            <a href=""><img class="payB1imgA" src="images/wpay_06.jpg" alt="del"></a>
+            <h1>付款详情</h1>
+            <a href=""><img class="payB1imgB" src="images/wpay_03.jpg" alt="del"></a>
+        </div>
+
+        <div class="layer payB2">
+            <dl>
+                <dt>订单信息</dt>
+                <dd>137-6068-0397 广东移动...</dd>
+            </dl>
+        </div>
+        <div class="layer payB2">
+            <dl>
+                <dt>付款方式</dt>
+                <select dir="rtl" class="payBSelect" name="" id="">
+                    <option value="0">余额宝</option>
+                    <option value="1">微信</option>
+                    <option value="2">支付宝</option>
+
+                </select>
+
+                <span class="payBchose">
+                    <img src="images/z_you.png">
+                </span>
+
+            </dl>
+        </div>
+        <div class="layer payB3">
+            <dl>
+                <dt>需付款</dt>
+                <dd>29.94元</dd>
+            </dl>
+        </div>
+        <div class="layer payB4">
+            <span>确认付款</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

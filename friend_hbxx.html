@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>好友抢红包-红包详细</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--图片延时加载-->
+    <script type="text/javascript" src="js/jquery.lazyload.js"></script>
+    <script src="js/function.js"></script>
+</head>
+<body class="bg_ff">
+
+
+<div class="layer advA bg_d45644">
+    <a href="javascript:;" onClick="javascript :history.back(-1);"><img src="images/back2.png" alt="back">
+    <div class="advA1">返回</div></a>
+    <div class="advA2">红包详细</div>
+</div>
+
+<!--焦点图结束-->
+<!--input-->
+<div class="layer">
+    <div class="pasZ">
+        <div class="friend_hbxx">
+        		<h1>恭喜</h1>
+        		<h3>获得<span>10元</span>红包</h3>
+        		<h6>请在有效期内提现</h6>
+        </div>
+        <img src="images/h_xx.jpg" />
+        <div class="friend_tixian">
+        		<h4>*已邀请6个好友参加</h4>
+        		<p>分享活动，再邀请5个不同的好友<br/>参加抢红包，即可领取。</p>
+        		<input class="friend_red" type="button" value="我要提现" />
+        		<input type="button" value="分享活动" />
+        </div>
+        <div class="friend_hdgz">
+        		<h3>活动规则</h3>
+        		<h6>1.满足条件自动提现到余额中。</h6>
+			<h6>2.红包有时限，过期无效，到期提醒。</h6>
+        </div>
+        
+    </div>
+</div>
+<div class="layer mt80 mb20"></div>
+<!--页尾开始-->
+<footer class="footer">
+    <ul class="footernav">
+        <li class="on">
+            <a href="index.html">
+                <img class="off" src="images/ind_40.png">
+                <img class="on" src="images/ind_41.png">
+                <div class="opacity">首页</div>
+            </a>
+        </li>
+        <li>
+            <a href="shops.html">
+                <img class="off" src="images/ind_42.png">
+                <img class="on" src="images/ind_43.png">
+                <div class="opacity">我的</div>
+            </a>
+        </li>
+    </ul>
+</footer>
+<!--页尾结束-->
+
+<script type="text/javascript" src="js/touchslider.dev.js"></script>
+
+<script type="text/javascript">
+    /*焦点图*/
+    var active = 0,
+            as = document.getElementById('pagenavi').getElementsByTagName('a');
+    for (var i = 0; i < as.length; i++) {
+        (function () {
+            var j = i;
+            as[i].onclick = function () {
+                t2.slide(j);
+                return false;
+            }
+        })();
+    }
+    var t2 = new TouchSlider({
+        id: 'slider', speed: 600, timeout: 6000, before: function (index) {
+            as[active].className = '';
+            active = index;
+            as[active].className = 'active';
+        }
+    });
+    /*焦点图E*/
+
+</script>
+</body>
+</html>

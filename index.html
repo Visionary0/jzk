@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>首页-兼赚客</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/function.js"></script>
+</head>
+<body class="bg">
+<!--焦点图开始-->
+<div class="layer homZ">
+    <a href=""><img src="images/ind_04.png" alt=""></a>
+</div>
+<div class="swipe">
+
+    <ul id="slider">
+        <li><a href="javascript:;"><img src="images/banner1.png" alt="" class="img"/></a></li>
+        <li><a href="javascript:;"><img src="images/banner1.png" alt="" class="img"/></a></li>
+        <li><a href="javascript:;"><img src="images/banner1.png" alt="" class="img"/></a></li>
+    </ul>
+    <div id="pagenavi">
+        <a href="javascript:void(0);" class="active"></a>
+        <a href="javascript:void(0);"></a>
+        <a href="javascript:void(0);"></a>
+    </div>
+</div>
+<!--焦点图结束-->
+<!--首页小宫格开始-->
+<div class="layer">
+    <div class="homABox brLN">
+        <img class="homAImg" src="images/ind_11.png" alt="">
+
+        <h1>兼赚客</h1>
+    </div>
+    <div class="homABox">
+        <div class="homARound">
+            <span style="">8</span>
+        </div>
+        <img class="homAImg" src="images/ind_13.png" alt="">
+
+        <h1>抢红包</h1>
+    </div>
+    <div class="homABox">
+        <div class="homARound">
+            <span style="">8</span>
+        </div>
+        <img class="homAImg" src="images/ind_16.png" alt="">
+
+        <h1>抢话费</h1>
+    </div>
+    <div class="homABox brRN">
+        <img class="homAImg" src="images/ind_18.png" alt="">
+
+        <h1>兑换商城</h1>
+    </div>
+    <div class="homABox brLN">
+        <img class="homAImg" src="images/ind_25.png" alt="">
+
+        <h1>钱包</h1>
+    </div>
+    <div class="homABox">
+        <img class="homAImg" src="images/ind_26.png" alt="">
+
+        <h1>排行榜</h1>
+    </div>
+    <div class="homABox">
+        <img class="homAImg" src="images/ind_27.png" alt="">
+
+        <h1>赚钱宝典</h1>
+    </div>
+</div>
+<div class="homABox brRN">
+
+</div>
+<!--首页小宫格开始-->
+
+<div class="layer homB">
+    <dl>
+        <img src="images/ind_31.png" width="25" height="28" alt="总赚钱">
+        <dt>总赚钱：
+            <span>100</span>金圆
+            今日：
+            <span>10</span>金圆
+        </dt>
+        <dd>
+            <img src="images/ind_34.png" width="29" height="28" alt="分享">
+            分享
+        </dd>
+    </dl>
+</div>
+<div class="layer mt10 mb10"><img src="images/ind_38.png" alt=""></div>
+
+<div class="layer mt80 mb20"></div>
+<!--页尾开始-->
+<footer class="footer">
+    <ul class="footernav">
+        <li class="on">
+            <a href="index.html">
+                <img class="off" src="images/ind_40.png">
+                <img class="on" src="images/ind_41.png">
+                <div class="opacity">首页</div>
+            </a>
+        </li>
+        <li>
+            <a href="shops.html">
+                <img class="off" src="images/ind_42.png">
+                <img class="on" src="images/ind_43.png">
+                <div class="opacity">我的</div>
+            </a>
+        </li>
+    </ul>
+</footer>
+<!--页尾结束-->
+
+<script type="text/javascript" src="js/touchslider.dev.js"></script>
+
+<script type="text/javascript">
+    /*焦点图*/
+    var active = 0,
+            as = document.getElementById('pagenavi').getElementsByTagName('a');
+    for (var i = 0; i < as.length; i++) {
+        (function () {
+            var j = i;
+            as[i].onclick = function () {
+                t2.slide(j);
+                return false;
+            }
+        })();
+    }
+    var t2 = new TouchSlider({
+        id: 'slider', speed: 600, timeout: 6000, before: function (index) {
+            as[active].className = '';
+            active = index;
+            as[active].className = 'active';
+        }
+    });
+    /*焦点图E*/
+
+</script>
+</body>
+</html>
